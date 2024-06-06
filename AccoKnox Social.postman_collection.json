@@ -19,18 +19,22 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"password123\",\n  \"name\": \"John Doe\"\n}"
+					"raw": "{\n  \"email\": \"test@avinashs2.com\",\n  \"password\": \"password123\",\n  \"name\": \"Avinash Singh\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8000/api/signup",
+					"raw": "http://0.0.0.0:8000/api/signup/",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"0",
+						"0",
+						"0",
+						"0"
 					],
 					"port": "8000",
 					"path": [
 						"api",
-						"signup"
+						"signup",
+						""
 					]
 				}
 			},
@@ -48,18 +52,22 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"password123\"\n}"
+					"raw": "{\n  \"email\": \"test@avinash.com\",\n  \"password\": \"password@123\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8000/api/login",
+					"raw": "http://0.0.0.0:8000/api/login/",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"0",
+						"0",
+						"0",
+						"0"
 					],
 					"port": "8000",
 					"path": [
 						"api",
-						"login"
+						"login",
+						""
 					]
 				}
 			},
@@ -158,13 +166,16 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"request_id\": 1,\n  \"action\": \"accept\"\n}"
+					"raw": "{\n  \"request_id\": 22,\n  \"action\": \"accept\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8000/api/friend-request-action/",
+					"raw": "http://0.0.0.0:8000/api/friend-request-action/",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"0",
+						"0",
+						"0",
+						"0"
 					],
 					"port": "8000",
 					"path": [
@@ -199,10 +210,13 @@
 					"raw": "{\n  \"request_id\": 1,\n  \"action\": \"reject\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8000/api/friend-request-action/",
+					"raw": "http://0.0.0.0:8000/api/friend-request-action/",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"0",
+						"0",
+						"0",
+						"0"
 					],
 					"port": "8000",
 					"path": [
@@ -229,10 +243,13 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8000/api/friends",
+					"raw": "http://0.0.0.0:8000/api/friends",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"0",
+						"0",
+						"0",
+						"0"
 					],
 					"port": "8000",
 					"path": [
@@ -251,13 +268,20 @@
 					{
 						"key": "Authorization",
 						"value": "Token {{token}}"
+					},
+					{
+						"key": "token",
+						"value": "IuHyAUvwWjh3awoQEtBaeP4w5wmqghZGz650AgdwFnoSyVDjtXbYdNSAoG5CucmG"
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8000/api/friend-request",
+					"raw": "http://0.0.0.0:8000/api/friend-request",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"0",
+						"0",
+						"0",
+						"0"
 					],
 					"port": "8000",
 					"path": [
