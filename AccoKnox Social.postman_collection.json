@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "e037c491-06b7-4b2b-b649-d07f90850d9a",
+		"name": "AccoKnox Social",
+		"description": "API collection for Social Networking Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35970148"
+	},
+	"item": [
+		{
+			"name": "User Signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"password123\",\n  \"name\": \"John Doe\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"password123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token {{token}}"
+					},
+					{
+						"key": "token",
+						"value": "IuHyAUvwWjh3awoQEtBaeP4w5wmqghZGz650AgdwFnoSyVDjtXbYdNSAoG5CucmG"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/search?q=am",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "am"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Friend Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Token {{token}}"
+					},
+					{
+						"key": "token",
+						"value": "IuHyAUvwWjh3awoQEtBaeP4w5wmqghZGz650AgdwFnoSyVDjtXbYdNSAoG5CucmG"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"to_user_id\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/friend-request/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"friend-request",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accept Friend Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Token {{token}}"
+					},
+					{
+						"key": "token",
+						"value": "IuHyAUvwWjh3awoQEtBaeP4w5wmqghZGz650AgdwFnoSyVDjtXbYdNSAoG5CucmG"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"request_id\": 1,\n  \"action\": \"accept\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/friend-request-action/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"friend-request-action",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reject Friend Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Token {{token}}"
+					},
+					{
+						"key": "token",
+						"value": "IuHyAUvwWjh3awoQEtBaeP4w5wmqghZGz650AgdwFnoSyVDjtXbYdNSAoG5CucmG"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"request_id\": 1,\n  \"action\": \"reject\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/friend-request-action/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"friend-request-action",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Friends",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token {{token}}"
+					},
+					{
+						"key": "token",
+						"value": "IuHyAUvwWjh3awoQEtBaeP4w5wmqghZGz650AgdwFnoSyVDjtXbYdNSAoG5CucmG"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/friends",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"friends"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Pending Friend Requests",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token {{token}}"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/friend-request",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"friend-request"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
