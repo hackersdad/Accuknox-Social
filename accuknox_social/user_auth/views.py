@@ -54,8 +54,8 @@ class UserSearchView(APIView):
         return JsonResponse({'status':'success', 'message': 'Search results','data': user_data})
 
 class FriendRequestView(APIView):
+   
     @token_required
-
     def post(self, request, *args, **kwargs):
         to_user_id = request.data.get('to_user_id')
         from_user_id = request.session.get('user_id')
@@ -72,7 +72,7 @@ class FriendRequestView(APIView):
         req.save()
 
         return JsonResponse({'status': 'success', 'message': f"Current time: {now}"+'Friend request sent'+str(timezone.get_current_timezone_name())})
-
+    @token_required
     def get(self, request, *args, **kwargs):
         user = request.session.get('user_id')
         pending_requests = FriendRequest.objects.filter(to_user_id = user,status='pending')

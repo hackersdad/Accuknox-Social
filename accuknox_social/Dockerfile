@@ -2,10 +2,18 @@
 FROM python:3.10-slim
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /accuknox_social
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    default-libmysqlclient-dev \
+    pkg-config \
+    gcc \
+    && rm -rf /var/lib/apt/lists/*
 
 # Copy the current directory contents into the container at /app
-COPY . /app
+COPY . .
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt

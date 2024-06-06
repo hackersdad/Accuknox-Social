@@ -1,7 +1,7 @@
 # My Django Project
 
 This is a Django project containerized using Docker and using MySQL as the database.
-
+NOte: Database is not containerised
 ## Features
 
 - Django web application
@@ -31,23 +31,19 @@ These instructions will help you set up and run the project on your local machin
     - Open Docker Desktop and ensure it's running.
     - Or, open `services.msc` and start the `Docker Desktop Service`.
 
-3. **Build the Docker image:**
+3. **Make DB Up and running on port 3306 with the help of sql file provided :**
+
+
+4. **Build the Docker image:**
 
     ```sh
     docker-compose build
     ```
 
-4. **Run the Docker containers:**
+5. **Run the Docker containers:**
 
     ```sh
     docker-compose up
-    ```
-5. **Make DB Up and running on port 3306 with the help of sql file provided :**
-
-6. **Apply the migrations:**
-
-    ```sh
-    docker-compose exec web python manage.py migrate
     ```
 
 ### Accessing the Application
