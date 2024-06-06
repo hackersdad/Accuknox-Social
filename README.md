@@ -42,17 +42,12 @@ These instructions will help you set up and run the project on your local machin
     ```sh
     docker-compose up
     ```
+5. **Make DB Up and running on port 3306 with the help of sql file provided :**
 
-5. **Apply the migrations:**
+6. **Apply the migrations:**
 
     ```sh
     docker-compose exec web python manage.py migrate
-    ```
-
-6. **Create a superuser (optional):**
-
-    ```sh
-    docker-compose exec web python manage.py createsuperuser
     ```
 
 ### Accessing the Application
